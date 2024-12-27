@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Four Paragraphs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin:75px;
+          border: 1px solid;
+          padding: 20px;
+          transition:border-color 0.3;
+        }
+        p {
+            margin: 10px 0;
+        }
+       .circle-button{
+        width: 100px;
+        height: 100px;
+        border-radius:50%;
+        margin: 50px;
+
+        }
+    </style>
+</head>
+<body>
+
+    <p id="part1">focus during exams is a crucial element for achieving academic success. Students need to be in a state of mental calmness and complete concentration on the questions posed. Stress and anxiety can negatively affect the ability to focus, so it's important for students to follow techniques such as deep breathing and effective time management. Additionally, thorough preparation and review of the material help boost self-confidence, making it easier to concentrate during the exam.</p>
+
+    <p id="part2">Providing excuses for not completing assignments is a sensitive topic in academic settings. Students may encounter circumstances that prevent them from finishing their work on time, such as illness or family issues. It is essential for students to have the ability to communicate clearly and honestly with their teachers and present valid excuses. Understanding from teachers can alleviate pressure on students and encourage them to stay committed to their studies, fostering a spirit of cooperation between students and teachers.</p>
+
+    <p id="part3">Diligence and hard work are the two fundamental values that determine an individual's success in academic and professional life. Working hard means being committed to plans and goals, dedicating the necessary time and effort to achieve success. Diligence requires continuous learning and personal development, regardless of the challenges one may face. Perseverance and dedication in work yield long-term rewards, as individuals achieve notable accomplishments in various fields, whether in education or in their careers.</p>
+
+    <p id="part4">Courage is not just the absence of fear; it is the ability to face fears and challenges with bravery and confidence. Courage manifests in many situations, whether in making tough decisions or confronting difficulties in life. A courageous person is one who faces challenges rather than fleeing from them, and can express their opinions and principles even in the face of opposition. Courage is an important value that enhances personal strength and helps achieve goals, as it empowers individuals to overcome obstacles and move forward toward success.</p>
+
+    <button class="circle-button"onclick="changeStyle()">
+        change
+    </button>
+
+    <script>
+        function changeStyle() {
+            
+            const color = prompt("Enter a color (e.g., red,0):");
+            const fontSize = prompt("Enter a font size in pixels :");
+
+            
+            const paragraphs = [
+                document.getElementById('part1'),
+                document.getElementById('part2'),
+                document.getElementById('part3'),
+                document.getElementById('part4')
+            ];
+
+            
+            paragraphs.forEach(para => {
+                para.style.color = color;
+                para.style.fontSize = fontSize + 'px';
+            });
+        }
+      </script>  
+
+</body>
+</html>
